@@ -32,6 +32,42 @@ body {
   background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, black 0px, black 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, black 0px, black 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, black 0px, black 19px, transparent 19px, transparent 22px), linear-gradient(90deg, #00fffa, #f0f0f0);
 }
 
+button {
+  background: linear-gradient(45deg, #ff416c, #cf3216);
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.5);
+  margin-top: 2%;
+  margin-inline: 45%;
+}
+
+/* Efek Hover */
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  box-shadow: 0 6px 15px rgba(255, 65, 108, 0.7);
+}
+
+/* Efek Saat Diklik */
+button:active {
+  transform: scale(0.95);
+}
+
+.text {
+  font-size: 24px;
+  margin-top: 3%; /* Tambahkan sedikit jarak dari atas */
+  color: white;
+  justify-content: center;
+  margin-inline: 20%;
+}
+
+
 .flowers {
   position: relative;
   transform: scale(0.7);
