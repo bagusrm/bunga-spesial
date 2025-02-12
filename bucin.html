@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Buat Bila</title>
+    <style>
+        /* Background bintang-bintang */
+        body {
+            background-color: black;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
+            background-size: 3px 3px;
+            animation: twinkle 2s infinite alternate;
+        }
+        
+        @keyframes twinkle {
+            from { opacity: 0.6; }
+            to { opacity: 1; }
+        }
+
+        /* Kotak utama */
+        .box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+            z-index: 1;
+        }
+
+        /* Tombol */
+        .btn-custom {
+            width: 100px;
+        }
+
+        #btnGamau {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <div class="box">
+            <h1>Haloooo bilaaa ✨</h1>
+            <p>
+                Kamu mau bunga ga? Kalau mau, klik tombol "MAU". Kalau gamau, klik tombol "GAMAU", 
+                tapi tombolnya cuma bisa diklik "MAU". Coba aja kamu klik "GAMAU" 😆
+            </p>
+            <img src="https://i.pinimg.com/originals/a1/8a/44/a18a4416bb6cbd54fe4a6ba4cd84f4d9.gif" alt="Bunga" class="img-fluid mb-3">
+            <div class="d-flex justify-content-center gap-3">
+                <a href="flower.html">
+                    <button id="btnMau" class="btn btn-success btn-custom">MAU</button>
+                </a>
+                <button id="btnGamau" class="btn btn-danger btn-custom position-relative" onclick="gamau(this)">GAMAU</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function gamau(id) {
+            var i = Math.floor(Math.random() * 300) + 1;
+            var j = Math.floor(Math.random() * 100) + 50;
+            id.style.left = i + 'px';
+            id.style.top = j + 'px';
+        }
+    </script>
+</body>
+</html>
